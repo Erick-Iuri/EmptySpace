@@ -1,0 +1,107 @@
+
+/* This is the css RESET */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Here the reset END */
+
+:root {
+    --blue--: #3164EF;
+    --light--blue: #DCE2F0;
+    --greey--: #12131E;
+    --light--greey--: #404040;
+    --white--: #F1F1F1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* here is the size of the body */
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+/* styles */
+
+.container {
+    text-align: center;
+}
+
+.container p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.container h1 {
+    font-size: 54px;
+    color: var(--blue--);
+}
+
+.container h2 {
+    color: var(--greey--);
+    font-size: 54px;
+}
+
+/* buttons */
+
+.button1 {
+    background-color: var(--blue--);
+    color: white;
+    font-size: 15px;
+    padding: 6px 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 1%;
+}
+
+.button1:hover {
+    background-color: var(--greey--);
+    transition: 0.5s;
+}
+
+.hellobutton {
+    background-color: var(--light--blue);
+    color: var(--blue--);
+    font-size: 15px;
+    padding: 6px 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 1%;
+}
+
+.hellobutton:hover {
+    background-color: var(--greey--);
+    transition: 0.5s;
+    color: var(--white--);
+}
+
+/* styles for the input */
+
+input {
+    margin-top: 10px;
+    width: 30%;
+    height: 30px;
+    padding: 3px;
+    font-size: 15px;
+
+    border: 1px solid var(--blue--);
+}
