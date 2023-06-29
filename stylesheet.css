@@ -18,12 +18,19 @@ body {
     --blue--: #3164EF;
     --light--blue: #DCE2F0;
     --greey--: #12131E;
-    --light--greey--: #404040;
+    --darkmod--background--: #12131E;
+    --light--greey--: #a9a9a9;
     --white--: #F1F1F1;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+.dark {
+    --greey--: white;
+    background-color: var(--darkmod--background--);
+    color: var(--white--);
 }
 
 /* here is the size of the body */
@@ -61,10 +68,10 @@ body {
 
 .button1 {
     background-color: var(--blue--);
+    border: 1px solid var(--blue--);
     color: white;
     font-size: 15px;
     padding: 6px 50px;
-    border: none;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -72,16 +79,17 @@ body {
 }
 
 .button1:hover {
-    background-color: var(--greey--);
+    border: 1px solid var(--light--blue);
+    background-color: var(--darkmod--background--);
     transition: 0.5s;
 }
 
 .hellobutton {
     background-color: var(--light--blue);
+    border: 1px solid var(--light--blue);
     color: var(--blue--);
     font-size: 15px;
     padding: 6px 50px;
-    border: none;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -89,7 +97,8 @@ body {
 }
 
 .hellobutton:hover {
-    background-color: var(--greey--);
+    border: 1px solid white;
+    background-color: var(--darkmod--background--);
     transition: 0.5s;
     color: var(--white--);
 }
@@ -105,3 +114,53 @@ input {
 
     border: 1px solid var(--blue--);
 }
+
+/* dark mode */
+
+.dark-theme {
+    margin: 10px 30px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 100px;
+	height: 50px;
+	background: var(--greey--);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--blue--);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 130px;
+}
+
+/* end dark mode */
